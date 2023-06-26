@@ -1,15 +1,25 @@
 package task1;
 
+import org.example.labs.Node;
+
+import java.util.NoSuchElementException;
+
 public class Stack<Item> {
+    Item data;
+    Stack<Item> next;
+    Item value;
+    Item item;
     private Queue<Item> q1;
     private Queue<Item> q2;
+    private Stack<Item> stackTop = null;
+    private int size = 0;
 
     public Stack() {
     	this.stackTop=null;
     }
 
     public void push(Item data) {
-    	Node<Item> newNode=new Node<Item>();
+    	Stack<Item> newNode=new Stack<Item>();
 		if(newNode==null) {
 			System.out.println("Stack is full");
 			}
@@ -23,7 +33,7 @@ public class Stack<Item> {
     	if (stackTop == null) {
             System.out.println("Stack underflow");
         }
-        Node<Item> temp=stackTop;
+        Stack<Item> temp=stackTop;
 
         stackTop = stackTop.next;
         return temp.data;

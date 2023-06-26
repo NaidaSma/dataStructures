@@ -3,6 +3,7 @@ package task2;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Algorithm {
     public static Double calculate(String s1) {
@@ -34,9 +35,6 @@ public class Algorithm {
             else if (token[i]=='^')   {
                 operator.push(token[i]);
             }
-            else if (token[i]=='sqrt')   {
-                operator.push(token[i]);
-            }
             else if (token[i]==')') {
                 char ope=operator.pop();
                 double num=number.pop();
@@ -55,12 +53,6 @@ public class Algorithm {
                 else if(ope=='%') {
                 	num=number.pop()%num;
                 }
-                else if(ope=='^') {
-                	num=number.pop()^num;
-                }
-                else if(ope=='sqrt') {
-                	num=Math.sqrt(num);
-                }
                 number.push(num);
             }
             else {
@@ -71,8 +63,9 @@ public class Algorithm {
 
         }
         System.out.println(number.pop());
+        return null;
     }
-    }
+
 
     public static ArrayList<Double> calculateFromFile(String filePath) throws FileNotFoundException {
     	ArrayList<String> expressions = FileUtils.readFile(filePath);

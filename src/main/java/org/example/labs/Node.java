@@ -3,8 +3,8 @@ package org.example.labs;
 import java.util.Iterator;
 
 public class Node <Item> implements Iterable<Item>{
-    Item data;
-    Node <Item> next;
+    public Item data;
+    public Node <Item> next;
     private Node<Item> head; // Instance variable for the head of the linked list
     private int size=0;
     public void addToFront (Item item){

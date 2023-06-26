@@ -1,8 +1,12 @@
 package task2;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class App {
 
-    public static void Main(String[] args) {
+    public static void Main(String[] args) throws FileNotFoundException {
     	Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the app!");
         System.out.println("How would you like to enter expressions? (1 for manual input, 2 for file input)");
