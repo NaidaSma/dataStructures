@@ -1,6 +1,6 @@
 package org.example.labs;
 
-public class RadixSort {
+public class RadixSort extends AbstractSort{
     public static void sort(int[] elements) {
         int maxNumb = getMax(elements);
 
@@ -10,8 +10,11 @@ public class RadixSort {
     }
     public static int getMax(int[] elements) {
         int max = elements[0];
-        for(int x : elements) {
-            if (x > max) max = x;
+        for(int i=1; i<elements.length;i++) {
+            if (elements[i] > max){
+
+                max = elements[i];
+            }
         }
 
         return max;

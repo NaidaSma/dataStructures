@@ -1,6 +1,6 @@
 package org.example.labs;
 
-public class BinaryHeap extends Comparable<Item>> {
+public class BinaryHeap extends Comparable <Item> {
     @SuppressWarnings({ "unchecked" })
     public Item[] pq = (Item[]) new Comparable[2];
     public int length = 0;
